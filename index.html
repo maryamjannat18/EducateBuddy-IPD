@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EducateBuddy Prototype</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>EducateBuddy</h1>
+
+  <!-- LOGIN / SIGNUP BOX -->
+  <div id="authBox">
+    <h2>Login / Sign up</h2>
+
+    <p>Email</p>
+    <input id="email" type="email" placeholder="name@email.com" />
+
+    <p>Password</p>
+    <input id="password" type="password" placeholder="password" />
+
+    <br><br>
+    <button id="signupBtn">Sign up</button>
+    <button id="loginBtn">Login</button>
+    <button id="resendBtn">Resend verification email</button>
+
+
+    <p id="msg"></p>
+  </div>
+
+  <!-- DASHBOARD BOX (hidden at first) -->
+<div id="dashBox" style="display:none;">
+  <h2>Dashboard</h2>
+  <p>You are logged in ✅</p>
+  <button id="logoutBtn">Logout</button>
+
+
+  <hr>
+
+  <h3>Create a Group</h3>
+  <input id="groupName" type="text" placeholder="Group name (e.g., AI Coursework)" />
+  <button id="createGroupBtn">Create Group</button>
+
+  <h3>Join a Group</h3>
+  <input id="groupCode" type="text" placeholder="Enter Group Code" />
+  <button id="joinGroupBtn">Join Group</button>
+
+  <p id="groupMsg"></p>
+
+  <hr>
+
+  <h3>Your Groups</h3>
+<button id="leaveGroupBtn">
+  Leave Group
+</button>
+<ul id="groupList"></ul>
+   
+  <hr>
+
+<h3 id="chatTitle">Group Chat</h3>
+<p class="muted" id="chatHint">Click a group above to open its chat.</p>
+
+<button id="deleteGroupBtn" class="danger-btn">
+  Delete Group
+</button>
+
+<div id="chatBox" style="display:none;">
+  <div id="messages" style="border:1px solid #ddd; padding:10px; height:180px; overflow:auto; margin-bottom:10px;"></div>
+
+<button id="shareFileBtn">
+  Share File
+</button>
+
+  <input id="messageInput" type="text" placeholder="Type a message..." />
+  <button id="sendMsgBtn">Send</button>
+</div>
+
+  
+</div>
+
+
+  <!-- loads app.js -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
